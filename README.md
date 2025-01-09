@@ -43,6 +43,28 @@ Bu proje, basit bir **stok takibi uygulaması** sunmak amacıyla geliştirilmiş
 - **Stok Görüntüleme**: Mevcut stokları görsel olarak takip edebilirsiniz.
 - **Arama Özelliği**: Ürünleri arayarak hızlı bir şekilde bulabilirsiniz.
 
+## Python Uygulamasını `.exe` Dosyasına Dönüştürme
+
+Python projenizi Windows işletim sistemi için çalıştırılabilir bir `.exe` dosyasına dönüştürmek için **PyInstaller**'ı kullanabilirsiniz. Aşağıda bu işlemi nasıl yapacağınız adım adım açıklanmıştır.
+
+### **1. PyInstaller Yükleme**
+
+İlk olarak, PyInstaller'ı yüklemeniz gerekiyor. Terminal veya komut istemcisini açarak aşağıdaki komutu çalıştırın:
+
+```bash
+pip install pyinstaller
+```
+
+2. Python Dosyasını .exe Dosyasına Dönüştürme
+Python dosyanızı .exe dosyasına dönüştürmek için terminali açın ve aşağıdaki komutu çalıştırın:
+```
+pyinstaller --onefile --noconsole app.py
+
+```
+
+Buradaki app.py dosyanızın adıdır. Bu komut, Python dosyasını tek bir .exe dosyasına dönüştürür.
+--onefile seçeneği, tüm bağımlılıkları tek bir dosyada toplar. Eğer bu seçeneği kullanmazsanız, .exe dosyasının yanında birden fazla dosya (bağımlılıklar için) oluşacaktır.
+
 ## Katkıda Bulunma
 
 Bu projeye katkıda bulunmak isterseniz, aşağıdaki adımları takip edebilirsiniz:
@@ -52,4 +74,6 @@ Bu projeye katkıda bulunmak isterseniz, aşağıdaki adımları takip edebilirs
 3. Yaptığınız değişiklikleri commit edin (`git commit -am 'Added new feature'`).
 4. Değişikliklerinizi push edin (`git push origin feature-branch`).
 5. Pull request oluşturun.
+
+
 
